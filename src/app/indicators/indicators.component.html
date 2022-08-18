@@ -1,0 +1,17 @@
+
+<div class="card mt-5">
+    <div class="card-header">
+        <h1>Indicators App</h1>
+    </div>
+    <div class="card-body">
+        <button class="btn w-100 mb-2" [class.disabled]="isLoading" *ngFor="let indicator of indicatorList" (click)="onIndicatorClick(indicator.codigo)">
+            <div class="d-flex justify-content-between">
+                <div class="title text-start">{{indicator.nombre}} <br> <small class="text-secondary">{{indicator.fecha}}</small></div>
+                <div class="stat">{{indicator.valor}} {{indicator.unidad_medida}}</div>
+            </div>
+        </button> 
+    </div>
+    <div class="card-footer">
+        <h6>&copy; Daniel Méndez - Prueba técnica</h6>
+    </div>
+</div>
